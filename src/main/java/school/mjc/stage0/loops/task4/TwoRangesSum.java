@@ -11,9 +11,9 @@ public class TwoRangesSum {
             int skippedSum = 0;
             int countedSum = 0;
             for (int count = 1; count <= lastInRow; count++) {
-                if(count < numberToSkip){
+                if(count <= numberToSkip){
                     skippedSum+= count;
-                } else if (count >= numberToSkip) {
+                } else if (count > numberToSkip) {
                     countedSum += count;
                 }
             }

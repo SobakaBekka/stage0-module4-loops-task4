@@ -2,14 +2,16 @@ package school.mjc.stage0.loops.task4;
 
 public class NumberToBreakOn {
     public void printNumbersUntilWithBreakOn(int toBreakWith, int numberToGoUntil) {
-
-        if(numberToGoUntil <= toBreakWith){
+        if(numberToGoUntil <= toBreakWith) {
             System.out.println("iterating till the end");
-            for (int count = 1; count <= numberToGoUntil; count++){
+            for (int count = 1; count <= numberToGoUntil; count++) {
                 System.out.println(count);
             }
-        } else {
-            for(int count = 1; count <= toBreakWith; count++){//ff
+        }else {
+            for (int count = 1; count <= numberToGoUntil; count++) {
+                if (count > toBreakWith) {
+                    break;
+                }
                 System.out.println(count);
             }
         }
